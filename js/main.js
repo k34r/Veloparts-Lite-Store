@@ -1,38 +1,27 @@
 import {getHeader} from "./components/header.js"
 import {getPageContainer} from "./components/pageContainer.js"
 
-// Страницы
-import {getMainPage} from "./pages/mainPage.js"
-import {getProductPage} from "./pages/productPage.js"
-import {getBascetPage} from "./pages/bascetPage.js"
-
-
-
-
-
-
-
-
-
-
-
 const header = getHeader()
 const pageContainer = getPageContainer()
 
-export function navigation(page) {
+// Навигация загрузки модулей страницы
+export async function navigation(page,id) {
     pageContainer.innerHTML = ""
 
     switch(page) {
         case "product":
-            const productPage = getProductPage("Продукт")
+            const productModule = await import(`./pages/productPage${id}.js`)
+            const productPage = productModule.getProductPage()
             pageContainer.append(productPage)
         break
         case "bascet":
-            const bascetPage = getBascetPage()
+            const bascetModule = await import("./pages/bascetPage.js")
+            const bascetPage = bascetModule.getBascetPage()
             pageContainer.append(bascetPage)
         break
         default:
-            const mainPage = getMainPage()
+            const mainModule = await import("./pages/mainPage.js")
+            const mainPage = mainModule.getMainPage()
             pageContainer.append(mainPage)
         break
     }

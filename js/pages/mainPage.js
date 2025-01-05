@@ -9,9 +9,9 @@ export function getMainPage() {
     list.classList.add("product__list")
 
     list.append(
-        getProductCard("Товар 1", 100),
-        getProductCard("Товар 2", 200),
-        getProductCard("Товар 3", 300)
+        getProductCard("Товар 1", 100, 1),
+        getProductCard("Товар 2", 200, 2),
+        getProductCard("Товар 3", 300, 3)
     )
 
     page.append(list)

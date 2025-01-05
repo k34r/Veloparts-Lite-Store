@@ -8,11 +8,14 @@ html {
     box-sizing: inherit;
 }
 
+a,body,h2 {
+    margin: 0;
+    padding: 0;
+}
+
 a {
     color: inherit;
     text-decoration: none;
-    padding: 7px;
-    margin: 10px;
 }
 
 a:hover {
@@ -24,8 +27,6 @@ img {
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: lightgray; 
     background-color: rgb(43, 43, 43);    
@@ -47,6 +48,11 @@ body {
     margin-right: auto;
 }
 
+.btn {
+    margin: 10px;
+    padding: 7px;
+}
+
 /* Контейнер страниц */
 .page__container {
     max-width: 1200px;
@@ -54,7 +60,7 @@ body {
     padding: 10px;
 }
 
-/* Страница товара */
+/* Список товаров */
 .product__list{
     display: flex;
     justify-content: space-evenly;
@@ -62,12 +68,27 @@ body {
 }
 
 .product__card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 2px solid #466322;
     border-radius: 5px;
-    padding: 20px;
+}
+
+.card__link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.card__title, .card__price, .card__btn {
+    margin: 20px;
 }
 
 /* Mobile версия */
