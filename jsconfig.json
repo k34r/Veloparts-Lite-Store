@@ -1,8 +1,24 @@
 {
   "compilerOptions": {
+    "target": "ESNext",             // Поддержка последних возможностей JS
+    "module": "ESNext",             // Модули ES6+
+    "moduleResolution": "node",     // Разрешение модулей по Node.js
+    "allowJs": true,                // Разрешить использование JavaScript файлов
+    "strict": true,                 // Включить строгий режим
+    "jsx": "preserve",              // Для JSX в React/Vue
+    "types": ["node", "vue"],       // Указание типов для Node и Vue
+    "lib": ["ESNext", "DOM"],       // Подключение стандартных библиотек (например, DOM)
+    "baseUrl": ".",                 // Указать корневую директорию для разрешения относительных путей
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]              // Настройка алиаса для доступа к src
     }
   },
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src/**/*.js",                  // Включаем все JS файлы в src
+    "src/**/*.vue",                 // Включаем Vue компоненты
+    "src/**/*.ts",                  // Включаем TypeScript файлы
+    "src/**/*.d.ts",                // Включаем типовые файлы
+    "src/**/*.tsx"                  // Включаем JSX/TSX файлы
+  ],
+  "exclude": ["node_modules"]       // Исключаем папку node_modules
 }

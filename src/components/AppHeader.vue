@@ -50,11 +50,11 @@
                 <span>1205р.</span>
             </li>
             <li class="flex gap-2 p-3 rounded-lg cursor-pointer hover:bg-zinc-800">
-                <img src="../pictures/heart.svg" alt="Cart">
+                <img src="../pictures/like-1.svg" alt="Heart">
                 <p>Избранное</p>
             </li>
             <li class="flex gap-2 p-3 rounded-lg cursor-pointer hover:bg-zinc-800">
-                <img src="../pictures/signin.svg" alt="Cart">
+                <img src="../pictures/signin.svg" alt="Out">
                 <p>Войти</p>
             </li>
 
