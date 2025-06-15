@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Cards from '@/pages/Cards.vue'
+import Cards from '../components/Cards.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,6 +8,12 @@ const router = createRouter({
       path: '/',
       name: 'cards',
       component: Cards,
+    },
+    {
+      path: '/card/:id',
+      name: 'card',
+      component: () => import('../components/Card.vue'),
+      props: true
     }
   ],
 })

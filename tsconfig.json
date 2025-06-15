@@ -1,12 +1,11 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",           // Поддержка последних возможностей JS
+  "compilerOptions": {         // Поддержка последних возможностей JS
     "module": "ESNext",           // Поддержка модулей с использованием import
     "moduleResolution": "node",   // Разрешение модулей по Node.js
     "lib": ["ESNext", "DOM"],     // Подключение стандартных библиотек
     "allowJs": true,              // Разрешение использования JavaScript файлов
     "strict": true,               // Включение строгого режима
-    "types": ["node", "vue"],     // Указание типов для Node и Vue
+    "types": ["node", "vue", "vite/client"],     // Указание типов для Node и Vue
     "jsx": "preserve"             // Для JSX
   },
   "include": [
